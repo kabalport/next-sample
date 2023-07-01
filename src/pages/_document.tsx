@@ -1,9 +1,11 @@
-import Document, {DocumentContext} from "next/document";
+import Document, {DocumentContext, DocumentInitialProps} from "next/document";
 import { ServerStyleSheet } from 'styled-components'
 
 // 기본 Document를 MyDocument로 덮어 쓴다.
 export default class MyDocument extends Document {
-    static async getInitialProps(ctx: DocumentContext){
+    static async getInitialProps(
+        ctx: DocumentContext
+    ) : Promise<DocumentInitialProps> {
         const sheet = new ServerStyleSheet()
         const originalRenderPage = ctx.renderPage
 
@@ -21,10 +23,12 @@ export default class MyDocument extends Document {
             return{
                 ...initialProps,
                 styles: [
-                    // 원래 스타일
-                    initialProps.styles,
-                    // 스타일드 컴포넌트의 style
-                    sheet.getStyleElement()
+                    <>
+                    {/*// 원래 스타일*/}
+                        {initialProps.styles}
+                    {/*// 스타일드 컴포넌트의 style*/}
+                        {sheet.getStyleElement()}
+                    </>,
                 ],
             }
         } finally {

@@ -43,7 +43,7 @@ const DesktopAppBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Link href="/Users/choedaeyeol/nextjs/next-sample/public" passHref>
+        <Link href="/" passHref>
           <Typography
             variant="h6"
             style={{ textDecoration: "none", color: "inherit" }}

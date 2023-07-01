@@ -1,15 +1,30 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { Container } from "@mui/material"; // 수정된 코드
+import {Container } from "@mui/material"; // 수정된 코드
 import AppBar from "@/components/AppBar";
 import { createTheme } from "@mui/material/styles";
 import myAxios from "../../utils/myaxios"; // 추가된 코드
 import Router from "next/router";
 import theme from '../styles/theme';
+import {createGlobalStyle} from "styled-components";
+import {AppProps} from "next/app";
+import Head from "next/head";
+
+// 글로벌 스타일
+const GlobalStyle2 = createGlobalStyle`
+html,
+body,
+textarea {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSysttemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        }
+`
 
 
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
         const refreshTokenInterval = setInterval(async () => {
             const loginInfo = JSON.parse(localStorage.getItem("loginInfo"));
@@ -50,6 +65,14 @@ function MyApp({ Component, pageProps }) {
     }, []);
 
     return (
+        <>
+        <Head>
+            <meta key="charset" name="charset" content="utf-8" />
+            <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=5" />
+            <meta property="og:locale" content="ko_KR" />
+            <meta property="og:type" content="website" />
+        </Head>
+            <GlobalStyle2 />
         <ThemeProvider theme={theme}>
             <AppBar />
             <Container
@@ -65,6 +88,7 @@ function MyApp({ Component, pageProps }) {
                 <Component {...pageProps} />
             </Container>
         </ThemeProvider>
+        </>
     );
 }
 
