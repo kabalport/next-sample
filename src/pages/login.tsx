@@ -101,7 +101,7 @@ const Login = () => {
                     로그인
                 </Button>
 
-                <Link href="/joinform" passHref>
+                <Link href="/Users/choedaeyeol/nextjs/next-sample/src/pages/joinform" passHref>
                     <Button color="inherit">회원가입</Button>
                 </Link>
                 <Link href="/findpassword" passHref>

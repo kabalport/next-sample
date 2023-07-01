@@ -9,7 +9,7 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
-import useLogout from "../hooks/useLogout"; // Import useAuth
+import useLogout from "../../hooks/useLogout"; // Import useAuth
 
 const DesktopAppBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 추가
@@ -43,7 +43,7 @@ const DesktopAppBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Link href="/" passHref>
+        <Link href="/Users/choedaeyeol/nextjs/next-sample/public" passHref>
           <Typography
             variant="h6"
             style={{ textDecoration: "none", color: "inherit" }}

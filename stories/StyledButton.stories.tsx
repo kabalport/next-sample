@@ -1,5 +1,5 @@
 import {ComponentMeta} from "@storybook/react";
-import {StyledButton} from "../components/StyledButton";
+import {StyledButton} from "../src/components/StyledButton";
 
 // 파일 안의 스토리 설정(메타데이터 객체)
 // export default {

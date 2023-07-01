@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material"; // 수정된 코드
 import AppBar from "@/components/AppBar";
 import { createTheme } from "@mui/material/styles";
-import myAxios from "../utils/myaxios"; // 추가된 코드
+import myAxios from "../../utils/myaxios"; // 추가된 코드
 import Router from "next/router";
 import theme from '../styles/theme';
 

@@ -14,7 +14,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Link from "next/link";
 import { makeStyles } from "@mui/styles";
-import useLogout from "../hooks/useLogout"; // Import useAuth
+import useLogout from "../../hooks/useLogout"; // Import useAuth
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -73,13 +73,13 @@ const MobileAppBar = ({ showBackButton }) => {
     <AppBar position="static">
       <Toolbar>
         {showBackButton ? (
-          <Link href="/" passHref>
+          <Link href="/Users/choedaeyeol/nextjs/next-sample/public" passHref>
             <IconButton edge="start" color="inherit" aria-label="back">
               <ArrowBackIcon />
             </IconButton>
           </Link>
         ) : (
-          <Link href="/" passHref>
+          <Link href="/Users/choedaeyeol/nextjs/next-sample/public" passHref>
             <Typography variant="h6" style={{ flexGrow: 1 }}>
               <img src="https://via.placeholder.com/30" alt="logo" width="30" />{" "}
               Meet42

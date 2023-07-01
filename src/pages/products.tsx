@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Link from "next/link"; // 추가된 코드
-import myAxios from "../utils/myaxios";
+import myAxios from "../../utils/myaxios";
 
 const useStyles = makeStyles((theme) => ({
   container: {

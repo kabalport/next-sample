@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 
 // 이미지 파일을 임포트한다.
-import BibleImage from "../public/images/bible.jpeg"
+import BibleImage from "../../public/images/bible.jpeg"
 
 
 const ImageSample: NextPage<void> = (props) => {
